@@ -1,0 +1,15 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+	<item
+		android:id="@+id/cwac_richedittext_foreground"
+		android:showAsAction="always|withText"
+		android:title="@string/cwac_richedittext_foreground">
+	</item>
+
+  <item
+    android:id="@+id/cwac_richedittext_background"
+    android:showAsAction="always|withText"
+    android:title="@string/cwac_richedittext_background">
+  </item>
+
+</menu>

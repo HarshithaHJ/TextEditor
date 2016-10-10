@@ -1,0 +1,19 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+	<item
+		android:id="@+id/cwac_richedittext_format"
+		android:showAsAction="always|withText"
+		android:title="@string/cwac_richedittext_format"
+		android:icon="@drawable/ic_action_format_dark">
+	</item>
+	<item
+		android:id="@+id/attach"
+		android:showAsAction="always|withText"
+		android:title="Attach">
+	</item>
+	<item
+		android:id="@+id/send"
+		android:showAsAction="always|withText"
+		android:title="Send">
+	</item>
+</menu>

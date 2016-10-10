@@ -1,0 +1,886 @@
+[
+    {
+        "outputFile": "/home/harshitha/harshitha/Compassites/project/TextEditor/richedit/build/intermediates/incremental/mergeDebugAndroidTestResources/merged.dir/values/values.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endColumn": 45,
+                    "endOffset": 96
+                },
+                "from": {
+                    "file": "/home/harshitha/harshitha/Compassites/project/TextEditor/richedit/build/intermediates/exploded-aar/com.android.support.test/rules/0.3/res/values/values.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 287,
+                        "endColumn": 45,
+                        "endOffset": 328
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 3,
+                    "startColumn": 4,
+                    "startOffset": 101,
+                    "endColumn": 67,
+                    "endOffset": 164
+                },
+                "from": {
+                    "file": "/home/harshitha/harshitha/Compassites/project/TextEditor/richedit/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 55,
+                        "endColumn": 67,
+                        "endOffset": 118
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 4,
+                    "startColumn": 4,
+                    "startOffset": 169,
+                    "endColumn": 55,
+                    "endOffset": 220
+                },
+                "from": {
+                    "file": "/home/harshitha/harshitha/Compassites/project/TextEditor/richedit/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 123,
+                        "endColumn": 55,
+                        "endOffset": 174
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 5,
+                    "startColumn": 4,
+                    "startOffset": 225,
+                    "endColumn": 59,
+                    "endOffset": 280
+                },
+                "from": {
+                    "file": "/home/harshitha/harshitha/Compassites/project/TextEditor/richedit/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 179,
+                        "endColumn": 59,
+                        "endOffset": 234
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 6,
+                    "startColumn": 4,
+                    "startOffset": 285,
+                    "endColumn": 57,
+                    "endOffset": 338
+                },
+                "from": {
+                    "file": "/home/harshitha/harshitha/Compassites/project/TextEditor/richedit/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 239,
+                        "endColumn": 57,
+                        "endOffset": 292
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 7,
+                    "startColumn": 4,
+                    "startOffset": 343,
+                    "endColumn": 61,
+                    "endOffset": 400
+                },
+                "from": {
+                    "file": "/home/harshitha/harshitha/Compassites/project/TextEditor/richedit/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 297,
+                        "endColumn": 61,
+                        "endOffset": 354
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 8,
+                    "startColumn": 4,
+                    "startOffset": 405,
+                    "endColumn": 57,
+                    "endOffset": 458
+                },
+                "from": {
+                    "file": "/home/harshitha/harshitha/Compassites/project/TextEditor/richedit/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 4,
+                        "startOffset": 359,
+                        "endColumn": 57,
+                        "endOffset": 412
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 9,
+                    "startColumn": 4,
+                    "startOffset": 463,
+                    "endColumn": 67,
+                    "endOffset": 526
+                },
+                "from": {
+                    "file": "/home/harshitha/harshitha/Compassites/project/TextEditor/richedit/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 4,
+                        "startOffset": 417,
+                        "endColumn": 67,
+                        "endOffset": 480
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 10,
+                    "startColumn": 4,
+                    "startOffset": 531,
+                    "endColumn": 59,
+                    "endOffset": 586
+                },
+                "from": {
+                    "file": "/home/harshitha/harshitha/Compassites/project/TextEditor/richedit/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 9,
+                        "startColumn": 4,
+                        "startOffset": 485,
+                        "endColumn": 59,
+                        "endOffset": 540
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 11,
+                    "startColumn": 4,
+                    "startOffset": 591,
+                    "endColumn": 55,
+                    "endOffset": 642
+                },
+                "from": {
+                    "file": "/home/harshitha/harshitha/Compassites/project/TextEditor/richedit/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 10,
+                        "startColumn": 4,
+                        "startOffset": 545,
+                        "endColumn": 55,
+                        "endOffset": 596
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 12,
+                    "startColumn": 4,
+                    "startOffset": 647,
+                    "endColumn": 59,
+                    "endOffset": 702
+                },
+                "from": {
+                    "file": "/home/harshitha/harshitha/Compassites/project/TextEditor/richedit/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 11,
+                        "startColumn": 4,
+                        "startOffset": 601,
+                        "endColumn": 59,
+                        "endOffset": 656
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 13,
+                    "startColumn": 4,
+                    "startOffset": 707,
+                    "endColumn": 57,
+                    "endOffset": 760
+                },
+                "from": {
+                    "file": "/home/harshitha/harshitha/Compassites/project/TextEditor/richedit/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 12,
+                        "startColumn": 4,
+                        "startOffset": 661,
+                        "endColumn": 57,
+                        "endOffset": 714
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 14,
+                    "startColumn": 4,
+                    "startOffset": 765,
+                    "endColumn": 60,
+                    "endOffset": 821
+                },
+                "from": {
+                    "file": "/home/harshitha/harshitha/Compassites/project/TextEditor/richedit/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 13,
+                        "startColumn": 4,
+                        "startOffset": 719,
+                        "endColumn": 60,
+                        "endOffset": 775
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 15,
+                    "startColumn": 4,
+                    "startOffset": 826,
+                    "endColumn": 59,
+                    "endOffset": 881
+                },
+                "from": {
+                    "file": "/home/harshitha/harshitha/Compassites/project/TextEditor/richedit/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 14,
+                        "startColumn": 4,
+                        "startOffset": 780,
+                        "endColumn": 59,
+                        "endOffset": 835
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 16,
+                    "startColumn": 4,
+                    "startOffset": 886,
+                    "endColumn": 63,
+                    "endOffset": 945
+                },
+                "from": {
+                    "file": "/home/harshitha/harshitha/Compassites/project/TextEditor/richedit/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 15,
+                        "startColumn": 4,
+                        "startOffset": 840,
+                        "endColumn": 63,
+                        "endOffset": 899
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 17,
+                    "startColumn": 4,
+                    "startOffset": 950,
+                    "endColumn": 61,
+                    "endOffset": 1007
+                },
+                "from": {
+                    "file": "/home/harshitha/harshitha/Compassites/project/TextEditor/richedit/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 16,
+                        "startColumn": 4,
+                        "startOffset": 904,
+                        "endColumn": 61,
+                        "endOffset": 961
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 18,
+                    "startColumn": 4,
+                    "startOffset": 1012,
+                    "endColumn": 57,
+                    "endOffset": 1065
+                },
+                "from": {
+                    "file": "/home/harshitha/harshitha/Compassites/project/TextEditor/richedit/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 17,
+                        "startColumn": 4,
+                        "startOffset": 966,
+                        "endColumn": 57,
+                        "endOffset": 1019
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 19,
+                    "startColumn": 4,
+                    "startOffset": 1070,
+                    "endColumn": 59,
+                    "endOffset": 1125
+                },
+                "from": {
+                    "file": "/home/harshitha/harshitha/Compassites/project/TextEditor/richedit/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 18,
+                        "startColumn": 4,
+                        "startOffset": 1024,
+                        "endColumn": 59,
+                        "endOffset": 1079
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 20,
+                    "startColumn": 4,
+                    "startOffset": 1130,
+                    "endColumn": 55,
+                    "endOffset": 1181
+                },
+                "from": {
+                    "file": "/home/harshitha/harshitha/Compassites/project/TextEditor/richedit/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 19,
+                        "startColumn": 4,
+                        "startOffset": 1084,
+                        "endColumn": 55,
+                        "endOffset": 1135
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 21,
+                    "startColumn": 4,
+                    "startOffset": 1186,
+                    "endColumn": 73,
+                    "endOffset": 1255
+                },
+                "from": {
+                    "file": "/home/harshitha/harshitha/Compassites/project/TextEditor/richedit/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 20,
+                        "startColumn": 4,
+                        "startOffset": 1140,
+                        "endColumn": 73,
+                        "endOffset": 1209
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 22,
+                    "startColumn": 4,
+                    "startOffset": 1260,
+                    "endColumn": 65,
+                    "endOffset": 1321
+                },
+                "from": {
+                    "file": "/home/harshitha/harshitha/Compassites/project/TextEditor/richedit/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 21,
+                        "startColumn": 4,
+                        "startOffset": 1214,
+                        "endColumn": 65,
+                        "endOffset": 1275
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 23,
+                    "startColumn": 4,
+                    "startOffset": 1326,
+                    "endColumn": 69,
+                    "endOffset": 1391
+                },
+                "from": {
+                    "file": "/home/harshitha/harshitha/Compassites/project/TextEditor/richedit/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 22,
+                        "startColumn": 4,
+                        "startOffset": 1280,
+                        "endColumn": 69,
+                        "endOffset": 1345
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 24,
+                    "startColumn": 4,
+                    "startOffset": 1396,
+                    "endColumn": 65,
+                    "endOffset": 1457
+                },
+                "from": {
+                    "file": "/home/harshitha/harshitha/Compassites/project/TextEditor/richedit/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 23,
+                        "startColumn": 4,
+                        "startOffset": 1350,
+                        "endColumn": 65,
+                        "endOffset": 1411
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "outputFile": "/home/harshitha/harshitha/Compassites/project/project/richedit/build/intermediates/incremental/mergeDebugAndroidTestResources/merged.dir/values/values.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endColumn": 45,
+                    "endOffset": 96
+                },
+                "from": {
+                    "file": "/home/harshitha/harshitha/Compassites/project/project/richedit/build/intermediates/exploded-aar/com.android.support.test/rules/0.3/res/values/values.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 287,
+                        "endColumn": 45,
+                        "endOffset": 328
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 3,
+                    "startColumn": 4,
+                    "startOffset": 101,
+                    "endColumn": 67,
+                    "endOffset": 164
+                },
+                "from": {
+                    "file": "/home/harshitha/harshitha/Compassites/project/project/richedit/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 55,
+                        "endColumn": 67,
+                        "endOffset": 118
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 4,
+                    "startColumn": 4,
+                    "startOffset": 169,
+                    "endColumn": 55,
+                    "endOffset": 220
+                },
+                "from": {
+                    "file": "/home/harshitha/harshitha/Compassites/project/project/richedit/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 123,
+                        "endColumn": 55,
+                        "endOffset": 174
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 5,
+                    "startColumn": 4,
+                    "startOffset": 225,
+                    "endColumn": 59,
+                    "endOffset": 280
+                },
+                "from": {
+                    "file": "/home/harshitha/harshitha/Compassites/project/project/richedit/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 179,
+                        "endColumn": 59,
+                        "endOffset": 234
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 6,
+                    "startColumn": 4,
+                    "startOffset": 285,
+                    "endColumn": 57,
+                    "endOffset": 338
+                },
+                "from": {
+                    "file": "/home/harshitha/harshitha/Compassites/project/project/richedit/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 239,
+                        "endColumn": 57,
+                        "endOffset": 292
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 7,
+                    "startColumn": 4,
+                    "startOffset": 343,
+                    "endColumn": 61,
+                    "endOffset": 400
+                },
+                "from": {
+                    "file": "/home/harshitha/harshitha/Compassites/project/project/richedit/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 297,
+                        "endColumn": 61,
+                        "endOffset": 354
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 8,
+                    "startColumn": 4,
+                    "startOffset": 405,
+                    "endColumn": 57,
+                    "endOffset": 458
+                },
+                "from": {
+                    "file": "/home/harshitha/harshitha/Compassites/project/project/richedit/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 4,
+                        "startOffset": 359,
+                        "endColumn": 57,
+                        "endOffset": 412
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 9,
+                    "startColumn": 4,
+                    "startOffset": 463,
+                    "endColumn": 67,
+                    "endOffset": 526
+                },
+                "from": {
+                    "file": "/home/harshitha/harshitha/Compassites/project/project/richedit/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 4,
+                        "startOffset": 417,
+                        "endColumn": 67,
+                        "endOffset": 480
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 10,
+                    "startColumn": 4,
+                    "startOffset": 531,
+                    "endColumn": 59,
+                    "endOffset": 586
+                },
+                "from": {
+                    "file": "/home/harshitha/harshitha/Compassites/project/project/richedit/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 9,
+                        "startColumn": 4,
+                        "startOffset": 485,
+                        "endColumn": 59,
+                        "endOffset": 540
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 11,
+                    "startColumn": 4,
+                    "startOffset": 591,
+                    "endColumn": 55,
+                    "endOffset": 642
+                },
+                "from": {
+                    "file": "/home/harshitha/harshitha/Compassites/project/project/richedit/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 10,
+                        "startColumn": 4,
+                        "startOffset": 545,
+                        "endColumn": 55,
+                        "endOffset": 596
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 12,
+                    "startColumn": 4,
+                    "startOffset": 647,
+                    "endColumn": 59,
+                    "endOffset": 702
+                },
+                "from": {
+                    "file": "/home/harshitha/harshitha/Compassites/project/project/richedit/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 11,
+                        "startColumn": 4,
+                        "startOffset": 601,
+                        "endColumn": 59,
+                        "endOffset": 656
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 13,
+                    "startColumn": 4,
+                    "startOffset": 707,
+                    "endColumn": 57,
+                    "endOffset": 760
+                },
+                "from": {
+                    "file": "/home/harshitha/harshitha/Compassites/project/project/richedit/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 12,
+                        "startColumn": 4,
+                        "startOffset": 661,
+                        "endColumn": 57,
+                        "endOffset": 714
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 14,
+                    "startColumn": 4,
+                    "startOffset": 765,
+                    "endColumn": 60,
+                    "endOffset": 821
+                },
+                "from": {
+                    "file": "/home/harshitha/harshitha/Compassites/project/project/richedit/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 13,
+                        "startColumn": 4,
+                        "startOffset": 719,
+                        "endColumn": 60,
+                        "endOffset": 775
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 15,
+                    "startColumn": 4,
+                    "startOffset": 826,
+                    "endColumn": 59,
+                    "endOffset": 881
+                },
+                "from": {
+                    "file": "/home/harshitha/harshitha/Compassites/project/project/richedit/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 14,
+                        "startColumn": 4,
+                        "startOffset": 780,
+                        "endColumn": 59,
+                        "endOffset": 835
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 16,
+                    "startColumn": 4,
+                    "startOffset": 886,
+                    "endColumn": 63,
+                    "endOffset": 945
+                },
+                "from": {
+                    "file": "/home/harshitha/harshitha/Compassites/project/project/richedit/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 15,
+                        "startColumn": 4,
+                        "startOffset": 840,
+                        "endColumn": 63,
+                        "endOffset": 899
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 17,
+                    "startColumn": 4,
+                    "startOffset": 950,
+                    "endColumn": 61,
+                    "endOffset": 1007
+                },
+                "from": {
+                    "file": "/home/harshitha/harshitha/Compassites/project/project/richedit/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 16,
+                        "startColumn": 4,
+                        "startOffset": 904,
+                        "endColumn": 61,
+                        "endOffset": 961
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 18,
+                    "startColumn": 4,
+                    "startOffset": 1012,
+                    "endColumn": 57,
+                    "endOffset": 1065
+                },
+                "from": {
+                    "file": "/home/harshitha/harshitha/Compassites/project/project/richedit/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 17,
+                        "startColumn": 4,
+                        "startOffset": 966,
+                        "endColumn": 57,
+                        "endOffset": 1019
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 19,
+                    "startColumn": 4,
+                    "startOffset": 1070,
+                    "endColumn": 59,
+                    "endOffset": 1125
+                },
+                "from": {
+                    "file": "/home/harshitha/harshitha/Compassites/project/project/richedit/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 18,
+                        "startColumn": 4,
+                        "startOffset": 1024,
+                        "endColumn": 59,
+                        "endOffset": 1079
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 20,
+                    "startColumn": 4,
+                    "startOffset": 1130,
+                    "endColumn": 55,
+                    "endOffset": 1181
+                },
+                "from": {
+                    "file": "/home/harshitha/harshitha/Compassites/project/project/richedit/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 19,
+                        "startColumn": 4,
+                        "startOffset": 1084,
+                        "endColumn": 55,
+                        "endOffset": 1135
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 21,
+                    "startColumn": 4,
+                    "startOffset": 1186,
+                    "endColumn": 73,
+                    "endOffset": 1255
+                },
+                "from": {
+                    "file": "/home/harshitha/harshitha/Compassites/project/project/richedit/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 20,
+                        "startColumn": 4,
+                        "startOffset": 1140,
+                        "endColumn": 73,
+                        "endOffset": 1209
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 22,
+                    "startColumn": 4,
+                    "startOffset": 1260,
+                    "endColumn": 65,
+                    "endOffset": 1321
+                },
+                "from": {
+                    "file": "/home/harshitha/harshitha/Compassites/project/project/richedit/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 21,
+                        "startColumn": 4,
+                        "startOffset": 1214,
+                        "endColumn": 65,
+                        "endOffset": 1275
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 23,
+                    "startColumn": 4,
+                    "startOffset": 1326,
+                    "endColumn": 69,
+                    "endOffset": 1391
+                },
+                "from": {
+                    "file": "/home/harshitha/harshitha/Compassites/project/project/richedit/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 22,
+                        "startColumn": 4,
+                        "startOffset": 1280,
+                        "endColumn": 69,
+                        "endOffset": 1345
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 24,
+                    "startColumn": 4,
+                    "startOffset": 1396,
+                    "endColumn": 65,
+                    "endOffset": 1457
+                },
+                "from": {
+                    "file": "/home/harshitha/harshitha/Compassites/project/project/richedit/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 23,
+                        "startColumn": 4,
+                        "startOffset": 1350,
+                        "endColumn": 65,
+                        "endOffset": 1411
+                    }
+                }
+            }
+        ]
+    }
+]
