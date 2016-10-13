@@ -157,8 +157,10 @@ public abstract class ImageCaptureActivity extends AppCompatActivity {
 
     public Bitmap getBitmap(File currentbitmap) {
         BitmapFactory.Options bmOptions = new BitmapFactory.Options();
+        bmOptions.inSampleSize = 1;
         Bitmap bitmap = BitmapFactory.decodeFile(currentbitmap.getAbsolutePath(), bmOptions);
-        bitmap = Bitmap.createScaledBitmap(bitmap, 100, 100, true);
+        bitmap = Bitmap.createScaledBitmap(bitmap, 350, 400, true);
+
         //imageView.setImageBitmap(bitmap);
         return bitmap;
 

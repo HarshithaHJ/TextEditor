@@ -15,7 +15,6 @@
 package com.compassites.texteditor;
 
 import android.Manifest;
-import android.app.Activity;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
@@ -25,12 +24,8 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.text.TextUtils;
 import android.util.Log;
-import android.widget.TextView;
+import android.widget.ImageView;
 import android.widget.Toast;
-
-import com.commonsware.cwac.colormixer.ColorMixerActivity;
-import com.commonsware.cwac.richedit.ColorPicker;
-import com.commonsware.cwac.richedit.ColorPickerOperation;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -39,25 +34,23 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-public class RichTextEditorDemoActivity extends ImageCaptureActivity
-        implements ColorPicker {
+public class RichTextEditorDemoActivity extends ImageCaptureActivity {
 
     private static final int COLOR_REQUEST = 1337;
     private static final int FILE_SELECT_CODE = 0;
+    private static final int PERMISSION_REQUEST_CODE = 1;
+    private static final int PERMISSION_REQUEST_CODE1 = 2;
 
-    private ColorPickerOperation colorPickerOp = null;
     private List<SampleModel> sampleModels = new ArrayList<>();
     private CustomAdapter customAdapter;
     private CustomDialogClass mCustomDialogClass;
 
     @Bind(R.id.list)
-    RecyclerView recyclerView;
+    RecyclerView list;
 
     @Bind(R.id.attach)
-    TextView attach;
+    ImageView attach;
 
-    @Bind(R.id.send)
-    TextView send;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -65,6 +58,7 @@ public class RichTextEditorDemoActivity extends ImageCaptureActivity
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
         addInitialEditTextView();
+        requestPermission();
         setAdapter();
 
     }
@@ -78,9 +72,10 @@ public class RichTextEditorDemoActivity extends ImageCaptureActivity
     private void setAdapter() {
         customAdapter = new CustomAdapter(sampleModels, mEditorCallbacks);
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getApplicationContext());
-        recyclerView.setLayoutManager(mLayoutManager);
-        recyclerView.setItemAnimator(new DefaultItemAnimator());
-        recyclerView.setAdapter(customAdapter);
+        list.setLayoutManager(mLayoutManager);
+        list.setItemAnimator(new DefaultItemAnimator());
+        list.setAdapter(customAdapter);
+
     }
 
     private CustomAdapter.EditorCallbacks mEditorCallbacks = new CustomAdapter.EditorCallbacks() {
@@ -94,13 +89,13 @@ public class RichTextEditorDemoActivity extends ImageCaptureActivity
                 model.videoPath = null;
             }
 
-//            if (TextUtils.isEmpty(model.textContent)) {
-//            } else {
-//                if (position > 0) {
-//                    sampleModels.get(position - 1).textContent = sampleModels.get(position - 1).textContent + "\n\n" + model.textContent;
-//                }
-//            }
-            sampleModels.remove(position);
+            if (TextUtils.isEmpty(sampleModels.get(position).textContent)) {
+                sampleModels.remove(position);
+            } else {
+                SampleModel sampleModel = sampleModels.get(position);
+                sampleModel.imagePath = null;
+                sampleModels.set(position, sampleModel);
+            }
             customAdapter.updateData(sampleModels);
             customAdapter.notifyDataSetChanged();
         }
@@ -112,53 +107,22 @@ public class RichTextEditorDemoActivity extends ImageCaptureActivity
         }
     };
 
-    @Override
-    public boolean pick(ColorPickerOperation op) {
-        Intent i = new Intent(this, ColorMixerActivity.class);
-        i.putExtra(ColorMixerActivity.TITLE, "Pick a Color");
-        if (op.hasColor()) {
-            i.putExtra(ColorMixerActivity.COLOR, op.getColor());
-        }
-        this.colorPickerOp = op;
-        startActivityForResult(i, COLOR_REQUEST);
-
-        return (true);
-    }
 
     @Override
-    public void onActivityResult(int requestCode, int resultCode,
-                                 Intent result) {
-        int color = 0;
-
-        if (colorPickerOp != null && requestCode == COLOR_REQUEST) {
-            if (resultCode == Activity.RESULT_OK) {
-                color = result.getIntExtra(ColorMixerActivity.COLOR, 0);
-            }
-
-            if (color == 0) {
-                colorPickerOp.onPickerDismissed();
-            } else {
-                colorPickerOp.onColorPicked(color);
-            }
-
-            colorPickerOp = null;
-        }
-    }
-
-    @Override
-    public void getSelectedPhotoFromGalleryPath(ArrayList<SelectionImageModel> uris) {
-
+    public void getSelectedPhotoFromGalleryPath(ArrayList<SelectionImageModel> uriList) {
+        SelectionImageModel selectionModel = uriList.get(0);
+        SampleModel sampleModel1 = new SampleModel();
+        sampleModel1.type = CustomAdapter.IMAGE;
+        sampleModel1.imagePath = selectionModel.getFilePath();
+        sampleModel1.bitmap = selectionModel.getBitmap();
+        sampleModels.add(sampleModel1);
+        customAdapter.updateData(sampleModels);
+        customAdapter.notifyItemInserted(sampleModels.size() - 1);
     }
 
     @Override
     public void getSelectedPhotoPath(SelectionImageModel path) {
-        SampleModel sampleModel1 = new SampleModel();
-        sampleModel1.type = CustomAdapter.IMAGE;
-        sampleModel1.imagePath = path.getFilePath();
-        sampleModel1.bitmap=path.getBitmap();
-        sampleModels.add(sampleModel1);
-        customAdapter.updateData(sampleModels);
-        customAdapter.notifyItemInserted(sampleModels.size() - 1);
+
     }
 
 
@@ -170,19 +134,12 @@ public class RichTextEditorDemoActivity extends ImageCaptureActivity
         }
         mCustomDialogClass.show();
     }
-    @OnClick(R.id.send)
-    public void onSendClick() {
-       printData();
-    }
+
+
     private CustomDialogClass.ClickListener mClickListener = new CustomDialogClass.ClickListener() {
         @Override
         public void onImageClick() {
-            SampleModel sampleModel1 = new SampleModel();
-            sampleModel1.type = CustomAdapter.IMAGE;
-            sampleModel1.imagePath ="image";
-            sampleModels.add(sampleModel1);
-            customAdapter.updateData(sampleModels);
-            customAdapter.notifyItemInserted(sampleModels.size() - 1);
+            uploadImageOrVideo(REQUEST_FROM_GALLERY);
         }
 
         @Override
@@ -235,28 +192,17 @@ public class RichTextEditorDemoActivity extends ImageCaptureActivity
                     Toast.LENGTH_SHORT).show();
         }
     }
-    private static final int PERMISSION_REQUEST_CODE = 1;
-//    private static final int PERMISSION_REQUEST_CODE1 = 2;
 
-    private void requestPermission(){
-
-        if (ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.CAMERA)){
-
-            Toast.makeText(this,"GPS permission allows us to access location data. Please allow in App Settings for additional functionality.",Toast.LENGTH_LONG).show();
+    private void requestPermission() {
+        if (ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.CAMERA)) {
+            Toast.makeText(this, "Camera permission allows us to access location data. Please allow in App Settings for additional functionality.", Toast.LENGTH_LONG).show();
 
         } else {
-
-            ActivityCompat.requestPermissions(this,new String[]{Manifest.permission.CAMERA},PERMISSION_REQUEST_CODE);
+            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.CAMERA},
+                    PERMISSION_REQUEST_CODE);
         }
 
-//        if (ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.WRITE_EXTERNAL_STORAGE)){
-//
-//            Toast.makeText(this,"GPS permission allows us to access location data. Please allow in App Settings for additional functionality.",Toast.LENGTH_LONG).show();
-//
-//        } else {
-//
-//            ActivityCompat.requestPermissions(this,new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},PERMISSION_REQUEST_CODE1);
-//        }
+
     }
 
     @Override
@@ -264,15 +210,27 @@ public class RichTextEditorDemoActivity extends ImageCaptureActivity
         switch (requestCode) {
             case PERMISSION_REQUEST_CODE:
                 if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-
-//                    Snackbar.make(view,"Permission Granted, Now you can access location data.",Snackbar.LENGTH_LONG).show();
-
+                    if (ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
+                        Toast.makeText(this, "Storage permission allows us to access location data. Please allow in App Settings for additional functionality.", Toast.LENGTH_LONG).show();
+                    } else {
+                        ActivityCompat.requestPermissions(this,
+                                new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, PERMISSION_REQUEST_CODE1);
+                    }
+                    Toast.makeText(this, "Camera permission granted", Toast.LENGTH_LONG).show();
                 } else {
+                    Toast.makeText(this, "Camera permission Denied", Toast.LENGTH_LONG).show();
 
-//                    Snackbar.make(view,"Permission Denied, You cannot access location data.",Snackbar.LENGTH_LONG).show();
+                }
+                break;
+            case PERMISSION_REQUEST_CODE1:
+                if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                    Toast.makeText(this, "Storage permission granted", Toast.LENGTH_LONG).show();
+                } else {
+                    Toast.makeText(this, "Storage permission Denied", Toast.LENGTH_LONG).show();
 
                 }
                 break;
         }
     }
+
 }

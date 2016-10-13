@@ -11,7 +11,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".RichTextEditorDemoActivity"
-            android:windowSoftInputMode="adjustResize">
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:windowSoftInputMode="adjustPan">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -23,6 +24,8 @@
             android:theme="@android:style/Theme.Holo.Light.Dialog">
         </activity>
         <activity android:name="com.soundcloud.android.crop.CropImageActivity" />
+        <activity android:name="com.compassites.texteditor.ViewImageFullScreenActivity" />
+
     </application>
 
 </manifest>

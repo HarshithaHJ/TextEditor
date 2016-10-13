@@ -4,8 +4,33 @@
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@android:color/white"
     android:orientation="vertical"
     tools:context="com.compassites.texteditor.RichTextEditorDemoActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/colorPrimary">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:text="TextEditor"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/attach"
+            android:layout_alignParentRight="true"
+            android:padding="5dp"
+            android:src="@drawable/ic_action_editor_attach_file" />
+
+    </RelativeLayout>
 
     <TextView
         android:layout_width="wrap_content"
@@ -17,37 +42,6 @@
         android:textSize="20sp"
         android:visibility="gone" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:orientation="horizontal"
-        android:weightSum="2">
-
-        <TextView
-            android:id="@+id/attach"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_gravity="center"
-            android:layout_marginRight="10dp"
-            android:layout_weight="1"
-            android:background="@color/colorPrimary"
-            android:gravity="center"
-            android:text="Attach"
-            android:textColor="@android:color/white"
-            android:textSize="20sp" />
-
-        <TextView
-            android:id="@+id/send"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_gravity="center"
-            android:layout_weight="1"
-            android:background="@color/colorPrimary"
-            android:gravity="center"
-            android:text="Send"
-            android:textColor="@android:color/white"
-            android:textSize="20sp" />
-    </LinearLayout>
 
 
     <android.support.v7.widget.RecyclerView
@@ -55,8 +49,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:overScrollMode="never"
         android:fadeScrollbars="true"
+        android:overScrollMode="never"
         android:scrollbars="vertical" />
 
 

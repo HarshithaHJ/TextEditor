@@ -53,9 +53,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
 
     @Override
     public void onBindViewHolder(MyViewHolder holder, int position) {
-        holder.editorView.setCloseListener(mEditorCallbacks);
-        holder.editorView.setData(list.get(position), position);
-
+        holder.editorView.setData(list.get(position), position, mEditorCallbacks);
     }
 
 

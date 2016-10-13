@@ -12,5 +12,9 @@ public class SampleModel {
     public String imagePath;
     public String videoPath;
     public Bitmap bitmap;
+    public Boolean isBold=false;
+    public Boolean isUnderLine=false;
+    public Boolean isItalic=false;
+    public int textSize=TextEditor.MIN_TEXT_SIZE;
 
 }
