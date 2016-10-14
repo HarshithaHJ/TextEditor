@@ -5,6 +5,7 @@ import android.graphics.Bitmap;
 public class SelectionImageModel {
     private String filePath;
     private Bitmap bitmap;
+    private int requestCode;
 
     public String getFilePath() {
         return filePath;
@@ -21,5 +22,13 @@ public class SelectionImageModel {
 
     public void setBitmap(Bitmap bitmap) {
         this.bitmap = bitmap;
+    }
+
+    public int getRequestCode() {
+        return requestCode;
+    }
+
+    public void setRequestCode(int requestCode) {
+        this.requestCode = requestCode;
     }
 }

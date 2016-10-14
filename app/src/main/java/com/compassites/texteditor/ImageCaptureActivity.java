@@ -28,7 +28,8 @@ import java.util.Date;
  */
 public abstract class ImageCaptureActivity extends AppCompatActivity {
     public static final int REQUEST_TAKE_PHOTO = 1;
-    public static final int REQUEST_FROM_GALLERY = 2;
+    public static final int REQUEST_IMAGE_FROM_GALLERY = 2;
+    public static final int REQUEST_VIDEO_FROM_GALLERY = 3;
     public String mCurrentPhotoPath;
 
     public void uploadImageOrVideo(int flag) {
@@ -36,13 +37,19 @@ public abstract class ImageCaptureActivity extends AppCompatActivity {
             case REQUEST_TAKE_PHOTO:
                 launchCamera();
                 break;
-            case REQUEST_FROM_GALLERY:
+            case REQUEST_IMAGE_FROM_GALLERY:
                 Intent intent = new Intent();
                 intent.setType("image/*");
-                intent.putExtra(Intent.EXTRA_ALLOW_MULTIPLE, true);
                 intent.setAction(Intent.ACTION_GET_CONTENT);
                 startActivityForResult(Intent.createChooser(intent, "Select Picture"),
-                        REQUEST_FROM_GALLERY);
+                        REQUEST_IMAGE_FROM_GALLERY);
+                break;
+            case REQUEST_VIDEO_FROM_GALLERY:
+                intent = new Intent();
+                intent.setType("video/*");
+                intent.setAction(Intent.ACTION_GET_CONTENT);
+                startActivityForResult(Intent.createChooser(intent, "Select Video"),
+                        REQUEST_VIDEO_FROM_GALLERY);
                 break;
         }
     }
@@ -116,7 +123,7 @@ public abstract class ImageCaptureActivity extends AppCompatActivity {
                     Toast.makeText(this, "Problem with this image", Toast.LENGTH_SHORT).show();
                     return;
                 }
-            } else if (requestCode == REQUEST_FROM_GALLERY) {
+            } else if (requestCode == REQUEST_IMAGE_FROM_GALLERY || requestCode == REQUEST_VIDEO_FROM_GALLERY) {
 
                 ArrayList<SelectionImageModel> galleryImageUrls = new ArrayList<>();
                 ClipData clipData = data.getClipData();
@@ -128,6 +135,7 @@ public abstract class ImageCaptureActivity extends AppCompatActivity {
                         Log.d("Normal Data", "Uri Info :" + uri.toString());
                         //File myFile = new File(uri.toString());
                         SelectionImageModel galleryImageUrl = AddPhotosinfo(uri);
+                        galleryImageUrl.setRequestCode(requestCode);
                         if (galleryImageUrl != null) {
                             galleryImageUrls.add(galleryImageUrl);
                         }
@@ -140,6 +148,7 @@ public abstract class ImageCaptureActivity extends AppCompatActivity {
                     if (galleryImageUrl == null) {
                         return;
                     }
+                    galleryImageUrl.setRequestCode(requestCode);
                     galleryImageUrls.add(galleryImageUrl);
                 }
                 if (galleryImageUrls.size() >= 1) {

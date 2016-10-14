@@ -17,7 +17,9 @@ package com.compassites.texteditor;
 import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.net.Uri;
 import android.os.Bundle;
+import android.os.Environment;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
@@ -36,7 +38,6 @@ import butterknife.OnClick;
 
 public class RichTextEditorDemoActivity extends ImageCaptureActivity {
 
-    private static final int COLOR_REQUEST = 1337;
     private static final int FILE_SELECT_CODE = 0;
     private static final int PERMISSION_REQUEST_CODE = 1;
     private static final int PERMISSION_REQUEST_CODE1 = 2;
@@ -111,13 +112,22 @@ public class RichTextEditorDemoActivity extends ImageCaptureActivity {
     @Override
     public void getSelectedPhotoFromGalleryPath(ArrayList<SelectionImageModel> uriList) {
         SelectionImageModel selectionModel = uriList.get(0);
-        SampleModel sampleModel1 = new SampleModel();
-        sampleModel1.type = CustomAdapter.IMAGE;
-        sampleModel1.imagePath = selectionModel.getFilePath();
-        sampleModel1.bitmap = selectionModel.getBitmap();
-        sampleModels.add(sampleModel1);
-        customAdapter.updateData(sampleModels);
-        customAdapter.notifyItemInserted(sampleModels.size() - 1);
+        if(selectionModel.getRequestCode()==REQUEST_IMAGE_FROM_GALLERY) {
+            SampleModel sampleModel1 = new SampleModel();
+            sampleModel1.type = CustomAdapter.IMAGE;
+            sampleModel1.imagePath = selectionModel.getFilePath();
+            sampleModel1.bitmap = selectionModel.getBitmap();
+            sampleModels.add(sampleModel1);
+            customAdapter.updateData(sampleModels);
+            customAdapter.notifyItemInserted(sampleModels.size() - 1);
+        }else {
+            SampleModel sampleModel1 = new SampleModel();
+            sampleModel1.type = CustomAdapter.IMAGE;
+            sampleModel1.videoPath = selectionModel.getFilePath();
+            sampleModels.add(sampleModel1);
+            customAdapter.updateData(sampleModels);
+            customAdapter.notifyItemInserted(sampleModels.size() - 1);
+        }
     }
 
     @Override
@@ -139,7 +149,7 @@ public class RichTextEditorDemoActivity extends ImageCaptureActivity {
     private CustomDialogClass.ClickListener mClickListener = new CustomDialogClass.ClickListener() {
         @Override
         public void onImageClick() {
-            uploadImageOrVideo(REQUEST_FROM_GALLERY);
+            uploadImageOrVideo(REQUEST_IMAGE_FROM_GALLERY);
         }
 
         @Override
@@ -149,12 +159,13 @@ public class RichTextEditorDemoActivity extends ImageCaptureActivity {
 
         @Override
         public void onVideoClick() {
-            SampleModel sampleModel1 = new SampleModel();
-            sampleModel1.type = CustomAdapter.VIDEO;
-            sampleModel1.videoPath = "video";
-            sampleModels.add(sampleModel1);
-            customAdapter.updateData(sampleModels);
-            customAdapter.notifyItemInserted(sampleModels.size() - 1);
+//            SampleModel sampleModel1 = new SampleModel();
+//            sampleModel1.type = CustomAdapter.VIDEO;
+//            sampleModel1.videoPath = "video";
+//            sampleModels.add(sampleModel1);
+//            customAdapter.updateData(sampleModels);
+//            customAdapter.notifyItemInserted(sampleModels.size() - 1);
+            uploadImageOrVideo(REQUEST_VIDEO_FROM_GALLERY);
         }
     };
 
@@ -179,18 +190,10 @@ public class RichTextEditorDemoActivity extends ImageCaptureActivity {
 
     private void showFileChooser() {
         Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
-        intent.setType("*/*");
-        intent.addCategory(Intent.CATEGORY_OPENABLE);
-
-        try {
-            startActivityForResult(
-                    Intent.createChooser(intent, "Select a File to Upload"),
-                    FILE_SELECT_CODE);
-        } catch (android.content.ActivityNotFoundException ex) {
-            // Potentially direct the user to the Market with a Dialog
-            Toast.makeText(this, "Please install a File Manager.",
-                    Toast.LENGTH_SHORT).show();
-        }
+        Uri uri = Uri.parse(Environment.getExternalStorageDirectory().getPath()
+        );
+        intent.setDataAndType(uri, "text/*");
+        startActivityForResult(Intent.createChooser(intent, "Open folder"), FILE_SELECT_CODE);
     }
 
     private void requestPermission() {
@@ -203,6 +206,15 @@ public class RichTextEditorDemoActivity extends ImageCaptureActivity {
         }
 
 
+    }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if (resultCode == RESULT_OK && requestCode == FILE_SELECT_CODE) {
+            Log.d("LOGTAG", "success");
+        }
     }
 
     @Override

@@ -141,7 +141,8 @@ public class TextEditor extends LinearLayout implements
                     ViewManager.showTheViews(cross, image);
                     ViewManager.hideTheViews(video);
                     cross.setTag(IMAGE);
-                    image.setImageBitmap(mSampleModel.bitmap);
+//                    image.setImageBitmap(mSampleModel.bitmap);
+                    image.setImageBitmap(CommonUtils.getBitmapWithSpecification(mSampleModel.imagePath, (Activity) mContext));
                     mSampleModel.videoPath = null;
                 }
                 break;
@@ -259,7 +260,7 @@ public class TextEditor extends LinearLayout implements
     @OnClick(R.id.imageview)
     public void onImageClick(View view) {
         Intent intent = new Intent(mContext, ViewImageFullScreenActivity.class);
-        intent.putExtra("list", mSampleModel.bitmap);
+        intent.putExtra("list1", mSampleModel.imagePath);
         mContext.startActivity(intent);
     }
 
